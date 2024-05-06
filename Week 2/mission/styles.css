@@ -26,6 +26,10 @@ body {
     margin: 0 auto;
 }
 
+.themeSelector {
+    color: black
+}
+
 /*Dark Mode Changes*/
 
 .dark h2 {
@@ -35,5 +39,5 @@ body {
     background-color: #333;
 }
 body.dark {
-    color: rgb(184, 184, 184);
+    color: rgb(255, 255, 255);
 }
