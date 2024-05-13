@@ -18,9 +18,13 @@ function handleResize() {
 handleResize();
 window.addEventListener("resize", handleResize);
 
-function viewerTemplate(pic, alt) {
+    function viewerTemplate(pic, alt) {
+        return `<div class = "viewer">
+        <span class="close-viewer">X</span>
+        <img class="viewer-image" src="norris-full.jpeg" alt="large picture">
+        </div>`;
+    }
 
-  }
   function viewHandler(event) {
 	// create a variable to hold the element that was clicked on from event.target
     const galleryButton = event.target;
@@ -31,9 +35,6 @@ function viewerTemplate(pic, alt) {
 	// construct the new image file name by adding "-full.jpeg" to the first part of the array from the previous step
     const fullFile = smallFile[0] + "-full.jpeg";
 
-	// insert the viewerTemplate into the top of the body element
-	// (element.insertAdjacentHTML("afterbegin", htmltoinsert))
-    const viewerTemplate = '<div class="viewer"><img src="' + fullFile + '"><button class="close-viewer">X</button></div>';
     document.body.insertAdjacentHTML('afterbegin', `<div class = "viewer">
     <span class="close-viewer">X</span>
     <img class="viewer-image" src="norris-full.jpeg" alt="large picture">
