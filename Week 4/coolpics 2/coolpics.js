@@ -21,7 +21,7 @@ window.addEventListener("resize", handleResize);
     function viewerTemplate(pic, alt) {
         return `<div class = "viewer">
         <span class="close-viewer">X</span>
-        <img class="viewer-image" src="norris-full.jpeg" alt="large picture">
+        <img class="viewer-image" src="${pic}" alt="large picture">
         </div>`;
     }
 
