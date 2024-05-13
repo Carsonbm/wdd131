@@ -35,12 +35,7 @@ window.addEventListener("resize", handleResize);
 	// construct the new image file name by adding "-full.jpeg" to the first part of the array from the previous step
     const fullFile = smallFile[0] + "-full.jpeg";
 
-    document.body.insertAdjacentHTML('afterbegin', `<div class = "viewer">
-    <span class="close-viewer">X</span>
-    <img class="viewer-image" src="norris-full.jpeg" alt="large picture">
-    </div>`);
-
-	// add a listener to the close button (X) that calls a function called closeViewer when clicked
+    document.body.insertAdjacentHTML('afterbegin', viewerTemplate(fullFile, "large picture"));
 
     document.querySelector('.close-viewer').addEventListener('click', closeViewer);
   }
