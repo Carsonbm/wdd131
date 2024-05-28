@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+.skiptocontent a {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    color: #fff;
+
+}
+.skiptocontent a:focus {
+    top: 0;
+}
+
+
+header {
+    color: #473144;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Lora', Impact, serif;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+nav {
+    border-top: 2px solid #EFC69B;
+    border-bottom: 2px solid #EFC69B;
+    display: flex;
+    justify-content: end;
+    justify-items: end;
+}
+
+nav ul {
+    list-style: none;
+    gap: 10px;
+    display: flex;
+    margin-right: 100px;
+}
+
+nav ul li a {
+    color: #AF1B3F;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+
+.book_date {
+    font-size: 2rem;
+}
+
+.book_title {
+    color: #AF1B3F;
+    font-family: 'Lora', Impact, serif;
+    font-size: 2em;
+    font-weight: bold;
+    padding-bottom: 25px;
+}
+
+.book_description {
+    color: #473144;
+    font-size: 1.5em;
+}
+
+.book_image {
+    margin-left: 40%;
+    margin-right: 50%;
+    max-width: 500px;
+    max-height: 500px;
+    
+}
+
+
+#articles_container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+    padding: 20px;
+}
+
+.book_details {
+    grid-column: 1;
+    font-size: 1.5em;
+    padding: 5px;
+    padding-right: 20px;
+    margin: 10px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    text-align: right;
+    border-right: 2px solid #EFC69B;
+    
+}
+
+.book_main {
+    grid-column: 2;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.filter_form {
+    grid-column: 3;
+    border: 2px solid #EFC69B;
+    grid-row: 1 /-5;
+}
