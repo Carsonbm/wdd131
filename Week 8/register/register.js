@@ -1,11 +1,9 @@
-import {successTemplate, participantTemplate} from './Templates.js';
+import {successTemplate, participantTemplate} from 'Templates.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     let participantCount = 1;
     console.log(`Participant Count: ${participantCount}`);
     const addButton = document.getElementById('add');
-
-
 
     function addParticipant() {
         participantCount += 1;
@@ -18,27 +16,26 @@ document.addEventListener('DOMContentLoaded', () => {
         let feeElements = document.querySelectorAll("[id^=fee]");
         console.log(feeElements);
         feeElements = [...feeElements];
-        const total = feeElements.reduce((sum, feeElement) => {
-            return sum + parseFloat(feeElement.value || 0);
+        return Array.from(feeElements).reduce((sum, feeElement) => {
+            const fee = parseFloat(feeElement.value) || 0;
+            return sum + fee;
         }, 0);
-        return total;
     }
 
     function submitForm(event) {
         event.preventDefault();
         // do the rest of the stuff
         const adultName = document.getElementById('adult_name').value;
-        const totalFeesCount = totalFees();
+        const totalFeesSum = totalFees();
         const info = {
             adultName: adultName,
             participantCount: participantCount,
-            totalFees: totalFeesCount
+            totalFees: totalFeesSum
         };
 
         const summarySection = document.getElementById('summary');
         summarySection.innerHTML = successTemplate(info);
         summarySection.classList.remove('hide');
-
         document.querySelector('form').classList.add('hide');
     }
 
