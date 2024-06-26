@@ -24,7 +24,7 @@ h1{
     width: 150px;
 }
 
-#searchContainer {
+#searchForm {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -40,7 +40,7 @@ h1{
     height: 50px;
 }
 
-.searchBar {
+#searchBar {
   height: 50px;
   border: none;
   margin: 0 10px;
@@ -69,6 +69,11 @@ img {
   max-height: 100%;
 }
 
+.recipeFlexBox {
+    display: flex;
+    justify-content: center;
+}
+
 .recipeContainer {
     border-radius: 25px;
     border: 1px solid black;
@@ -77,6 +82,7 @@ img {
     flex-direction: column;
     align-items: center;
     padding: 10px;
+    max-width: 1500px;
     
 
 }

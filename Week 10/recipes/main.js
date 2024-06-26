@@ -19,17 +19,19 @@ console.log(getRandomListEntry(recipes));
 
 function recipeTemplate(recipe) {
 	return `<figure class="recipe">
-	<div class="recipeContainer">
-            <img id='recipePicture' img src="${recipe.image}" alt="Image of meal" />
-            <div id="details">
-                <div id="tag">${tagsTemplate(recipe.tags)}</div>
-                <div id="recipeTitle">${recipe.name}</div>
-                
-                <span
-                ${ratingTemplate(recipe.rating)}
-                </span>
+    <div class='recipeFlexBox'>
+        <div class="recipeContainer">
+                <img id='recipePicture' img src="${recipe.image}" alt="Image of meal" />
+                <div id="details">
+                    <div id="tag">${tagsTemplate(recipe.tags)}</div>
+                    <div id="recipeTitle">${recipe.name}</div>
+                    
+                    <span
+                    ${ratingTemplate(recipe.rating)}
+                    </span>
 
-                <div id="description">${recipe.description}</div>
+                    <div id="description">${recipe.description}</div>
+                </div>
             </div>
         </div>
     </figure>`;
@@ -105,18 +107,33 @@ init();
 
 
 function filter(query) {
-	const filtered = recipes.filter(filterFunction)
-	// sort by name
-	const sorted = filtered.sort(sortFunction)
-		return sorted
-
+    const filtered = filterFunction(query);
+    const sorted = filtered.sort((a, b) => a.name.localeCompare(b.name));
+    return sorted;
 }
+
+function filterFunction(query) {
+    const filteredRecipes = recipes.filter(recipe => {
+        const nameSearch = recipe.name.toLowerCase().includes(query);
+        const descriptionSearch = recipe.description.toLowerCase().includes(query);
+        const tagSearch = recipe.tags.some(tag => tag.toLowerCase().includes(query));
+        const ingSearch = recipe.recipeIngredient.some(ingredient => ingredient.toLowerCase().includes(query));
+        return nameSearch || descriptionSearch || tagSearch || ingSearch;
+    });
+    return filteredRecipes
+}
+
 
 function searchHandler(e) {
-	e.preventDefault()
-	// get the search input
-  // convert the value in the input to lowercase
-  // use the filter function to filter our recipes
-  // render the filtered list
+    e.preventDefault()
+	const searchQuery = document.getElementById('searchBar').value;
+    console.log(searchQuery);
 
+    const lowerCaseQuery = searchQuery.toLowerCase();
+    console.log(lowerCaseQuery)
+
+    const filteredRecipes = filter(lowerCaseQuery);
+    renderRecipes(filteredRecipes);
 }
+
+document.getElementById('searchForm').addEventListener('submit', searchHandler);
