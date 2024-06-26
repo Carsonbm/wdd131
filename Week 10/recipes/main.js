@@ -99,13 +99,14 @@ function init() {
 }
 init();
 
-
+//Filter the recipes by the serach query.
 function filter(query) {
     const filtered = filterFunction(query);
     const sorted = filtered.sort((a, b) => a.name.localeCompare(b.name));
     return sorted;
 }
 
+//Find matching items from the search query in the name, desc, tag, or ing.
 function filterFunction(query) {
     const filteredRecipes = recipes.filter(recipe => {
         const nameSearch = recipe.name.toLowerCase().includes(query);
@@ -117,7 +118,7 @@ function filterFunction(query) {
     return filteredRecipes
 }
 
-
+//Get the search query, filter, and render the appropriate recipes. 
 function searchHandler(e) {
     e.preventDefault()
 	const searchQuery = document.getElementById('searchBar').value;
