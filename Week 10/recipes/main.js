@@ -16,20 +16,21 @@ console.log(getRandomListEntry(recipes));
 
 //Html to be loaded
 function recipeTemplate(recipe) {
-	return `<figure class="recipe">
-    <div class='recipeFlexBox'>
-        <div class="recipeContainer">
-                <img id='recipePicture' img src="${recipe.image}" alt="Image of meal" />
-                <div id="details">
-                    <div id="tag">${tagsTemplate(recipe.tags)}</div>
-                    <div id="recipeTitle">${recipe.name}</div>
-                    
-                    <span
-                    ${ratingTemplate(recipe.rating)}
-                    </span>
+	return `
+    <figure class="recipe">
+        <div class='recipeFlexBox'>
+            <div class="recipeContainer">
+                    <img id='recipePicture' img src="${recipe.image}" alt="Image of meal" />
+                    <div id="details">
+                        <div id="tag">${tagsTemplate(recipe.tags)}</div>
+                        <div id="recipeTitle">${recipe.name}</div>
+                        
+                        <span
+                        ${ratingTemplate(recipe.rating)}
+                        </span>
 
-                    <div id="description">${recipe.description}</div>
-                </div>
+                        <div id="description">${recipe.description}</div>
+                    </div>
             </div>
         </div>
     </figure>`;
