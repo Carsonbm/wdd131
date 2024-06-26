@@ -54,6 +54,7 @@ function ratingTemplate(rating) {
 >`
 // our ratings are always out of 5, so create a for loop from 1 to 5
     for (let i = 1; i <=5; i++) {
+        //console.log(`I: ${i}`);
         if (i <= rating){
             html += `<span aria-hidden="true" class="icon-star">⭐</span>
             `;
