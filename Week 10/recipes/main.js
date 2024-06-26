@@ -1,7 +1,6 @@
 import recipes from './recipes.js';
 
 //Get Random Recipe
-
 function random(num) {
 	return Math.floor(Math.random() * num);
 }
@@ -16,7 +15,6 @@ function getRandomListEntry(list) {
 console.log(getRandomListEntry(recipes));
 
 //Html to be loaded
-
 function recipeTemplate(recipe) {
 	return `<figure class="recipe">
     <div class='recipeFlexBox'>
@@ -37,7 +35,6 @@ function recipeTemplate(recipe) {
     </figure>`;
 }
 
-
 function tagsTemplate(tags) {
     const html = tags.map(function(tag) {
         return `<li>${tag}</li>
@@ -46,9 +43,7 @@ function tagsTemplate(tags) {
     return html;
 }
 
-
 //Build and get the rating into the html
-
 function ratingTemplate(rating) {
 	// begin building an html string using the ratings HTML written earlier as a model.
 	let html = `<span
@@ -82,10 +77,7 @@ function ratingTemplate(rating) {
 const recipe = getRandomListEntry(recipes);
 console.log(recipeTemplate(recipe));
 
-
-
 //Load Recipes Into Html
-
 function renderRecipes(recipeList) {
 	// get the element we will output the recipes into
     const recipeOutput = document.getElementById('randomRecipe');
