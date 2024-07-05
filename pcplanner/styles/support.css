@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    /* change the values below to your colors from your palette */
+    --primary-color: #4F6D7A;
+    --secondary-color: #C0D6DF;
+    --accent1-color: #4A6FA5;
+    --accent2-color: #166088;
+  
+    /* change the values below to your chosen font(s) */
+    --heading-font: 'Kanit', 'Oswald', 'Arial', sans-serif;
+    --paragraph-font: 'Roboto', sans-serif;
+  
+    /* these colors below should be chosen from among your palette colors above */
+    --headline-color-on-white: var(
+      --primary-color
+    ); /* headlines on a white background */
+    --headline-color-on-color: white; /* headlines on a colored background */
+    --paragraph-color-on-white: var(
+      --primary-color
+    ); /* paragraph text on a white background */
+    --paragraph-color-on-color: white; /* paragraph text on a colored background */
+    --paragraph-background-color: var(--primary-color);
+    --nav-link-color: var(--primary-color);
+    --nav-background-color: var(--secondary-color);
+    --nav-hover-link-color: white;
+    --nav-hover-background-color: var(--primary-color);
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+}
+
+  header {
+    font-family: var(--heading-font);
+    font-size: 2em;
+    background-color: var(--primary-color);
+    color: var(----headline-color-on-color);
+    text-align: center;
+    margin: 0;
+    padding: 1rem 0;
+    border-bottom: 5px solid black;
+    
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    padding: 0 5rem;
+    color: var(--nav-link-color);
+}
+
+.menu a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    padding: 100px;
+}
+
+.menu a:hover {
+    color: white;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+}
+
+.main-support {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    max-width: 2000px;
+    margin: 0 auto;
+    align-items: stretch;
+  }
+
+img {
+
+}
+
+
+
+
+footer {
+    font-family: var(--paragraph-font);
+    font-size: 2em;
+    padding: 1rem;
+    /*background-color: var(--accent2-color);*/
+    color: var(--text-light);
+    margin: 0;
+    text-align: right;
+  }
+  
