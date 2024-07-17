@@ -8,11 +8,13 @@
         <link rel="stylesheet" href="./styles/pcplanner.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="main.js" type="module"></script>
+        <link rel="icon" href="./pictures/pcplanner_logo.webp">
         <!-- https://carsonbm.github.io/wdd131/ -->
       </head>
 <body>
+    <!--Header for the logo and navigation menu.-->
     <header>
-        <h1>PC Planner</h1>
+        <img src="./pictures/pcplanner_logo.webp" alt="Image of PC Planer Logo.">
         <nav class="menu">
             <div class="navContainer">
                 <a href="./index.html">Home</a>
@@ -22,18 +24,20 @@
     </header>
 
     <main>
+        <!--Section to contain all the information to be loaded on the left side or top of the screen.-->
         <section id="left-side">
-
+            <!--Div to hold all the left side buttons. data- used to containe the information about each button.-->
             <div class="pc-picker">
-                <button id="pc1-button">PC1</button>
-                <button id="pc1-button">PC2</button>
-                <button id="pc1-button">PC3</button>
-                <button id="pc1-button">PC4</button>
-                <button id="pc1-button">PC5</button>
-                <button id="pc1-button">PC6</button>
-                <button id="show-all-button" class="show-all">All</button>
+                <button class="pc-button" data-side="left" data-pc="PC1">PC1</button>
+                <button class="pc-button" data-side="left" data-pc="PC2">PC2</button>
+                <button class="pc-button" data-side="left" data-pc="PC3">PC3</button>
+                <button class="pc-button" data-side="left" data-pc="PC4">PC4</button>
+                <button class="pc-button" data-side="left" data-pc="PC5">PC5</button>
+                <button class="pc-button" data-side="left" data-pc="PC6">PC6</button>
+                <button class="show-all" class="show-all" data-side="left">All</button>
             </div>
 
+            <!--Div to hold the selected PC's details. To increase performance, a default PC is loaded here that will be replaced by the user's inputs.-->
             <div class="left-pc-details">
                 <h2>PC1</h2>
                 <img src="./pictures/pc1.webp" alt="PC1 Image">
@@ -45,49 +49,56 @@
                 <p>Fans: 6</p>
                 <h3>Games:</h3>
                 <ul>
-                    <li>Fortnite: 1440p 120FPS</li>
-                    <li>Valorant: 4k 120FPS</li>
-                    <li>Minecraft: 4k 700FPS</li>
+                    <li>Fortnite: 4K 180FPS</li>
+                    <li>Valorant: 4K 240FPS</li>
+                    <li>Minecraft: 4K 900FPS</li>
                 </ul>
             </div>
         </section>
 
+        <!--Bars to seperate the left/right top/bottom.-->
         <div class="verticalBar"></div>
         <div class="horizontalBar"></div>
 
+        <!--Section to contain all the information to be loaded on the right side or bottom of the screen.-->
         <section id="right-side">
-
+             <!--Div to hold all the right side buttons. data- used to containe the information about each button.-->
             <div class="pc-picker">
-                <button id="pc1-button">PC1</button>
-                <button id="pc1-button">PC2</button>
-                <button id="pc1-button">PC3</button>
-                <button id="pc1-button">PC4</button>
-                <button id="pc1-button">PC5</button>
-                <button id="pc1-button">PC6</button>
-                <button id="show-all-button" class="show-all">All</button>
+                <button class="pc-button" data-side="right" data-pc="PC1">PC1</button>
+                <button class="pc-button" data-side="right" data-pc="PC2">PC2</button>
+                <button class="pc-button" data-side="right" data-pc="PC3">PC3</button>
+                <button class="pc-button" data-side="right" data-pc="PC4">PC4</button>
+                <button class="pc-button" data-side="right" data-pc="PC5">PC5</button>
+                <button class="pc-button" data-side="right" data-pc="PC6">PC6</button>
+                <button class="show-all" class="show-all" data-side="right">All</button>
             </div>
 
+            <!--Div to hold the selected PC's details. To increase performance, a default PC is loaded here that will be replaced by the user's inputs.-->
             <div class="right-pc-details">
-                <h2>PC1</h2>
-                <img src="./pictures/pc1.webp" alt="PC1 Image">
+                <h2>PC2</h2>
+                <img src="./pictures/pc2.webp" alt="./pictures/pc2.webp Image">
                 <p>Builder: Carson Meikle</p>
-                <p>Price: $2000</p>
-                <p>CPU: Ryzen 7 7700x</p>
-                <p>GPU: 6950xt</p>
-                <p>RAM: DDR5 32GB</p>
-                <p>Fans: 6</p>
+                <p>Price: $1500</p>
+                <p>CPU: Ryzen 5 5600x</p>
+                <p>GPU: 3060ti</p>
+                <p>RAM: DDR4 16GB</p>
+                <p>Fans: 5</p>
                 <h3>Games:</h3>
                 <ul>
                     <li>Fortnite: 1440p 120FPS</li>
-                    <li>Valorant: 4k 120FPS</li>
-                    <li>Minecraft: 4k 700FPS</li>
+                    <li>Valorant: 4K 120FPS</li>
+                    <li>Minecraft: 4K 700FPS</li>
                 </ul>
             </div> 
         </section>
 
     </main>
 
+    <!--Footer containing copyright and link to the site plan.-->
     <footer>
+        <div class="sitePlan">
+            <a href="./site-plan.html">Site-Plan</a>
+        </div>
         ©2024 Carson Meikle
     </footer>
 </body>

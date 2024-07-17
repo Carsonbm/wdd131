@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support Page</title>
+    <meta name="description" content="Get support for one of our six PCs.">
+    <meta name="author" content="Carson Meikle">
     <link rel="stylesheet" href="./styles/pcplanner.css">
+    <script src="support.js" type="module"></script>
+    <link rel="icon" href="./pictures/pcplanner_logo.webp">
 </head>
 <body>
+    <!--Header for the logo and navigation menu.-->
     <header>
-        <h1>PC Planner</h1>
+        <h1>PC Planner Support</h1>
         <nav class="menu">
             <div class="navContainer">
                 <a href="./index.html">Home</a>
@@ -16,34 +21,47 @@
             </div>
         </nav>
     </header>
-
+    
     <main class="main-support">
-        <div class="support-title">
+        <!--Box containing the Support image and message for user.-->
+        <div class="support-info">
             <img src="./pictures/support-setup-cropped.webp" alt="Image of high end gaming setup.">
             <div class="support-message">We are here to help! Have a question about some of our specs and outlines for your own custom PC? Fill out this form and we will get back to you with any help you need for your build!</div>
-        </div>
 
-        <div class="support-form-container">
-            <form action="/submit" method="post" id="supportform">
+            <form id="supportform">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="Name" placeholder="John Doe" maxlength="20" required>
                 
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="xxxxxx@xxxx.com"  required>
+                <input type="email" id="email" name="email" placeholder="xxxxxx@xxxx.com"  maxlength="40" required>
                 
                 <label for="phone-number">Phone Number:</label>
-                <input type="text" id="phone-number" name="phone-number" placeholder="(xxx) xxx-xxxx" required>
+                <input type="text" id="phone-number" name="phone-number" placeholder="(xxx) xxx-xxxx" maxlength="10" required>
 
-                <label for="Question">Question:</label>
+                <label for="pc-options">PC Inquiry is About:</label>
+                <select name="pc-options" id="pc-options">
+                    <option value="PC1">PC1</option>
+                    <option value="PC2">PC2</option>
+                    <option value="PC3">PC3</option>
+                    <option value="PC4">PC4</option>
+                    <option value="PC5">PC5</option>
+                    <option value="PC6">PC6</option>
+                </select>
+
+                <label for="question">Question:</label>
                 <textarea id="question" name="question"></textarea>
-                <input type="submit" value="Submit" required>
+                <input type="submit" value="Submit" class="submit-button" required>
             </form>
+            <!--Will show message as the submit button is pressed.-->
+            <div id="support-confirmation">Inquiry sent!</div>
         </div>
     </main>
 
-    
-
+    <!--Footer containing copyright and link to the site plan.-->
     <footer>
+        <div class="sitePlan">
+            <a href="./site-plan.html">Site-Plan</a>
+        </div>
         ©2024 Carson Meikle
     </footer>
     
